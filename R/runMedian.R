@@ -9,7 +9,7 @@ runMedian <- function(m, N=5) {
   if (nd==2) m else if (!nd) m[ ,1] else array(m, od)     # Matrix/Vector/Array
 }
 
-runMean <- function(m, N=5) {
+runMean <- function(m, N=21) {
   d <- od <- dim(m)
   if (!(nd <- length(d))) d <- c(length(m), 1)               # Vector -> matrix
   if (nd > 2) d <- c(d[1], prod(d[-1]))                      # Array  -> matrix

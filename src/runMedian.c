@@ -1,5 +1,7 @@
+#include <R.h>
+
 void runMedian(double *m, int *d, int *N) {
-  int i, j, k, a, R=(*N+1)/2, r[*N];
+  int i, j, k, a, R=(*N+1)/2, *r=(int*) R_alloc(*N, sizeof(int));
   double old, new, *x;
 
   for (j=1; j <= d[1]; j++) {	                        /* Loop over columns */

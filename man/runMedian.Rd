@@ -5,7 +5,7 @@
 \description{Running prior N-day median (or mean) on columns of a matrix}
 \usage{
   runMedian(m, N=5)
-  runMean(m, N=5)
+  runMean(m, N=21)
 }
 \arguments{
   \item{m}{A vector, matrix, or array, with time (day) on the first dimension.}
@@ -26,7 +26,7 @@
 \examples{
 m <- matrix(c(2,7,1,3,8,3,8,4,9,7,0,9,4,3,1,1, 1:8), 8,3)
 runMedian(m)
-runMean(m)
+runMean(m, 5)
 }
 \keyword{array}
 \keyword{arith}
